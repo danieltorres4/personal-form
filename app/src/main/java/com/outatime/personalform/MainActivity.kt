@@ -13,9 +13,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.etBirthday.setOnClickListener{
+            showDatePickerDialog()
+        }
     }
 
     fun click(view: View) {
+
+    }
+
+    /*fun chooseDate(){
+        binding.etBirthday.setOnClickListener{
+            showDatePickerDialog()
+        }
+    }*/
+
+    private fun showDatePickerDialog() {
+        val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
+
+        datePicker.show(supportFragmentManager, "datePicker")
+    }
+
+    fun onDateSelected(day: Int, month: Int, year: Int){
 
     }
 }
