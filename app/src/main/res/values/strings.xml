@@ -5,4 +5,5 @@
     <string name="tv_birthday">Birthday</string>
     <string name="tv_an">Account Number</string>
     <string name="tv_email">Email</string>
+    <string name="btn_show_info">Show info</string>
 </resources>
