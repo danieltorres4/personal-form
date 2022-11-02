@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PersonalForm</string>
+    <string name="showing_app_name">Personal Form</string>
+    <string name="tv_name">Name</string>
+    <string name="tv_birthday">Birthday</string>
+    <string name="tv_an">Account Number</string>
+    <string name="tv_email">Email</string>
 </resources>
