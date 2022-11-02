@@ -18,4 +18,8 @@ class MainActivity : AppCompatActivity() {
     fun click(view: View) {
 
     }
+
+    fun pickBirthday() {
+
+    }
 }
