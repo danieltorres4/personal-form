@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDateSelected(day: Int, month: Int, year: Int){
+        binding.etBirthday.setText("$day / $month / $year")
 
     }
 }
