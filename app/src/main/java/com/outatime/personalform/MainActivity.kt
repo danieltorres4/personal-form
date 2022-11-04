@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     private fun showDatePickerDialog() {
-        var datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
+        var datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, (month+1), year)}
 
         datePicker.show(supportFragmentManager, "datePicker")
     }
