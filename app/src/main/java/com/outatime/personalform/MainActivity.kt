@@ -30,13 +30,14 @@ class MainActivity : AppCompatActivity() {
     }*/
 
     private fun showDatePickerDialog() {
-        val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
+        var datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
 
         datePicker.show(supportFragmentManager, "datePicker")
     }
 
     fun onDateSelected(day: Int, month: Int, year: Int){
         binding.etBirthday.setText("$day / $month / $year")
+        print("\n\nMonth: $month\n\n")
 
     }
 }
