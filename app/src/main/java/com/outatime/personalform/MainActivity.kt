@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.tvBirthday.setOnClickListener{
+            showDatePickeDialog()
+        }
     }
 
     fun click(view: View) {
@@ -23,7 +27,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun pickBirthday() {
+    private fun showDatePickeDialog() {
+        var datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, (month+1), year)}
 
+        datePicker.show(supportFragmentManager, "datePicker")
+    }
+
+    fun onDateSelected(day: Int, month: Int, year: Int){
+        binding.tvBirthday.setText("$day / $month / $year")
     }
 }
