@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_showing_info">Tu información</string>
+    <string name="tv_name">Nombre</string>
+    <string name="tv_birthday">Fecha de nacimiento</string>
+    <string name="tv_an">Número de cuenta</string>
+    <string name="btn_show_info">Mostrar información</string>
+    <string name="btn_return">Regresar</string>
+    <string name="app_version">Versión 1.0</string>
+    <string name="tv_show_age">Edad</string>
+    <string name="tv_zodiac_sign">Signo Zodiacal</string>
+    <string name="tv_chinese_horoscope">Horóscopo Chino</string>
+</resources>
