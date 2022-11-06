@@ -10,4 +10,8 @@
     <string name="tv_show_age">Edad</string>
     <string name="tv_zodiac_sign">Signo Zodiacal</string>
     <string name="tv_chinese_horoscope">Horóscopo Chino</string>
+    <string name="tv_result_name">Nombre: %s</string>
+    <string name="tv_result_age">Edad: %d</string>
+    <string name="tv_result_an">NC: %s</string>
+    <string name="tv_result_birthday">Nacimiento: %s</string>
 </resources>

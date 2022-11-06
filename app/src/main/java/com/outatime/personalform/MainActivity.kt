@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.View
 import com.outatime.personalform.databinding.ActivityMainBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     var birthday: String = ""
     var accountNumber: String = ""
     var email: String = ""
+    var age: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         param.putString("birthday", birthday)
         param.putString("accountNumber", accountNumber)
         param.putString("email", email)
+        param.putInt("age", age)
 
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         intent.putExtras(param)
@@ -51,6 +55,28 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onDateSelected(day: Int, month: Int, year: Int){
-        binding.tvBirthday.setText("$day / $month / $year")
+        //binding.tvBirthday.setText("$day / $month / $year")
+        binding.tvBirthday.setText(getString(R.string.ma_date_of_birth, day, month, year))
+
+        var birthday = "$day/$month/$year"
+        lateinit var yourBirthday: Date
+
+        try {
+            yourBirthday = SimpleDateFormat("dd/MM/yyyy").parse(birthday)
+        }
+        catch (e: Exception){
+            println(e)
+        }
+
+        var today = Date(System.currentTimeMillis())
+        var diffDate = today.getTime() - yourBirthday.getTime()
+        var sec = diffDate/1000
+        var minutes = sec/60
+        var hours = minutes/60
+        var days = hours/24
+
+        age = (days/365).toInt()
+
+        println("$age years old")
     }
 }
