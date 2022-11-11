@@ -33,4 +33,16 @@
     <string name="rooster_chinese_horoscope">Gallo</string>
     <string name="dog_chinese_horoscope">Perro</string>
     <string name="pig_chinese_horoscope">Cerdo</string>
+    <string name="aquarius">Acuario</string>
+    <string name="gemini">Géminis</string>
+    <string name="pisces">Piscis</string>
+    <string name="sagittarius">Sagitario</string>
+    <string name="scorpio">Escorpio</string>
+    <string name="taurus">Tauro</string>
+    <string name="capricorn">Capricornio</string>
+    <string name="cancer">Cáncer</string>
+    <string name="aries">Aries</string>
+    <string name="leo">Leo</string>
+    <string name="libra">Libra</string>
+    <string name="virgo">Virgo</string>
 </resources>

@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     var email: String = ""
     var age: Int = 0
     var myYear: Int = 0
+    var myMonth: Int = 0
+    var myDay: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +49,8 @@ class MainActivity : AppCompatActivity() {
                 param.putString("email", email)
                 param.putInt("age", age)
                 param.putInt("myYear", myYear)
+                param.putInt("myMonth", myMonth)
+                param.putInt("myDay", myDay)
 
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.putExtras(param)
@@ -96,6 +100,8 @@ class MainActivity : AppCompatActivity() {
 
         var birthday = "$day/$month/$year"
         myYear = year
+        myMonth = month
+        myDay = day
         lateinit var yourBirthday: Date
 
         try {

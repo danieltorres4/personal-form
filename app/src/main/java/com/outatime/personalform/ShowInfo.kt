@@ -28,6 +28,8 @@ class ShowInfo : AppCompatActivity() {
         var email = bundle?.getString("email","")
         var age = bundle?.getInt("age", 0)
         var myYear = bundle?.getInt("myYear", 0)
+        var myMonth = bundle?.getInt("myMonth", 0)
+        var myDay = bundle?.getInt("myDay", 0)
         age.toString()
 
         binding2.tvShowName.text = getString(R.string.tv_result_name, name)
@@ -38,6 +40,10 @@ class ShowInfo : AppCompatActivity() {
 
         if (myYear != null) {
             chineseHoroscope(myYear.toInt())
+        }
+
+        if (myDay != null && myMonth != null) {
+            zodiacSign(myDay, myMonth)
         }
         /*
         Toast.makeText(this, "Name: $name", Toast.LENGTH_LONG).show()
@@ -92,6 +98,134 @@ class ShowInfo : AppCompatActivity() {
         } else if (year == 1935 || year == 1947 || year == 1959 || year == 1971 || year == 1983 || year == 1995 || year == 2007 || year == 2019) {
             binding2.ivChineseHoroscope.setImageResource(R.drawable.pig)
             binding2.tvChineseHoroscopeType.text = getString(R.string.pig_chinese_horoscope)
+        }
+    }
+
+    fun zodiacSign(day: Int, month: Int){
+        println("zodiacSign() function\n\n")
+        print(month)
+        print(day)
+
+        when(month) {
+            1 -> {
+                if(day >= 21) {
+                    binding2.tvZodiacSignType.text = getString(R.string.aquarius)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.aquarius)
+                } else { //day <= 20
+                    binding2.tvZodiacSignType.text = getString(R.string.capricorn)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.capricorn)
+                }
+            }
+
+            2 -> {
+                if(day >= 19) {
+                    binding2.tvZodiacSignType.text = getString(R.string.pisces)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.pisces)
+                } else { //day <= 18
+                    binding2.tvZodiacSignType.text = getString(R.string.aquarius)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.aquarius)
+                }
+            }
+
+            3 -> {
+                if(day >= 21) {
+                    binding2.tvZodiacSignType.text = getString(R.string.aries)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.aries)
+                } else { //day <= 20
+                    binding2.tvZodiacSignType.text = getString(R.string.pisces)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.pisces)
+                }
+            }
+
+            4 -> {
+                if(day >= 21) {
+                    binding2.tvZodiacSignType.text = getString(R.string.taurus)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.taurus)
+                } else { //day <= 20
+                    binding2.tvZodiacSignType.text = getString(R.string.aries)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.aries)
+                }
+            }
+
+            5 -> {
+                if(day >= 22) {
+                    binding2.tvZodiacSignType.text = getString(R.string.gemini)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.gemini)
+                } else { //day <= 21
+                    binding2.tvZodiacSignType.text = getString(R.string.taurus)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.taurus)
+                }
+            }
+
+            6 -> {
+                if(day >= 22) {
+                    binding2.tvZodiacSignType.text = getString(R.string.cancer)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.cancer)
+                } else { //day <= 21
+                    binding2.tvZodiacSignType.text = getString(R.string.gemini)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.gemini)
+                }
+            }
+
+            7 -> {
+                if(day >= 23) {
+                    binding2.tvZodiacSignType.text = getString(R.string.leo)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.leo)
+                } else { //day <= 22
+                    binding2.tvZodiacSignType.text = getString(R.string.cancer)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.cancer)
+                }
+            }
+
+            8 -> {
+                if(day >= 24) {
+                    binding2.tvZodiacSignType.text = getString(R.string.virgo)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.virgo)
+                } else { //day <= 23
+                    binding2.tvZodiacSignType.text = getString(R.string.leo)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.leo)
+                }
+            }
+
+            9 -> {
+                if(day >= 24) {
+                    binding2.tvZodiacSignType.text = getString(R.string.libra)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.libra)
+                } else { //day <= 23
+                    binding2.tvZodiacSignType.text = getString(R.string.virgo)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.virgo)
+                }
+            }
+
+            10 -> {
+                if(day >= 24) {
+                    binding2.tvZodiacSignType.text = getString(R.string.scorpio)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.scorpio)
+                } else { //day <= 23
+                    binding2.tvZodiacSignType.text = getString(R.string.libra)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.libra)
+                }
+            }
+
+            11 -> {
+                if(day >= 23) {
+                    binding2.tvZodiacSignType.text = getString(R.string.sagittarius)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.sagittarius)
+                } else { //day <= 22
+                    binding2.tvZodiacSignType.text = getString(R.string.scorpio)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.scorpio)
+                }
+            }
+
+            12 -> {
+                if(day >= 22) {
+                    binding2.tvZodiacSignType.text = getString(R.string.capricorn)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.capricorn)
+                } else { //day <= 21
+                    binding2.tvZodiacSignType.text = getString(R.string.sagittarius)
+                    binding2.ivZodiacHoroscope.setImageResource(R.drawable.sagittarius)
+                }
+            }
         }
     }
 }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tv_showing_info">Mostrare le informazioni</string>
+    <string name="tv_name">Nome</string>
+    <string name="tv_birthday">Data di nascita</string>
+    <string name="tv_an">Numero di conto</string>
+    <string name="btn_show_info">Mostra informazioni</string>
+    <string name="btn_return">Ritorno</string>
+    <string name="app_version">Versione 1.0</string>
+    <string name="tv_show_age">Età</string>
+    <string name="tv_zodiac_sign">Segno Zodiacale</string>
+    <string name="tv_chinese_horoscope">Oroscopo cinese</string>
+    <string name="tv_result_name">Nome: %s</string>
+    <string name="tv_result_age">Età: %d</string>
+    <string name="tv_result_an">NC: %s</string>
+    <string name="tv_result_birthday">Data di nascita: %s</string>
+    <string name="toast_required_values">Dovreste riempire tutti i valori!</string>
+    <string name="name_required">Il vostro nome è obbligatorio!</string>
+    <string name="birthday_required">La data di nascita è obbligatoria!</string>
+    <string name="an_required">Il numero di conto è obbligatorio!</string>
+    <string name="an_invalid_length">Il numero di conto deve essere composto da almeno 9 cifre</string>
+    <string name="email_required">Il tuo indirizzo e-mail è obbligatorio!</string>
+    <string name="not_valid_email">Email non valida!</string>
+    <string name="rat_chinese_horoscope">Ratto</string>
+    <string name="ox_chinese_horoscope">Bue</string>
+    <string name="tiger_chinese_horoscope">Tigre</string>
+    <string name="rabbit_chinese_horoscope">Coniglio</string>
+    <string name="dragon_chinese_horoscope">Drago</string>
+    <string name="snake_chinese_horoscope">Serpente</string>
+    <string name="horse_chinese_horoscope">Cavallo</string>
+    <string name="goat_chinese_horoscope">Capra</string>
+    <string name="monkey_chinese_horoscope">Scimmia</string>
+    <string name="rooster_chinese_horoscope">Gallo</string>
+    <string name="dog_chinese_horoscope">Cane</string>
+    <string name="pig_chinese_horoscope">Maiale</string>
+    <string name="aquarius">Acquario</string>
+    <string name="aries">Ariete</string>
+    <string name="cancer" translatable="false">Cancro</string>
+    <string name="capricorn">Capricorno</string>
+    <string name="gemini">Gemelli</string>
+    <string name="leo">Leone</string>
+    <string name="libra" translatable="false">Bilancia</string>
+    <string name="pisces">Pesci</string>
+    <string name="sagittarius">Sagittario</string>
+    <string name="scorpio">Scorpione</string>
+    <string name="taurus">Toro</string>
+    <string name="virgo" translatable="false">Vergine</string>
+</resources>
