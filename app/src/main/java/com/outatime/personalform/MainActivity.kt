@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     var accountNumber: String = ""
     var email: String = ""
     var age: Int = 0
+    var myYear: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                 param.putString("accountNumber", accountNumber)
                 param.putString("email", email)
                 param.putInt("age", age)
+                param.putInt("myYear", myYear)
 
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.putExtras(param)
@@ -93,6 +95,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvBirthday.setText(getString(R.string.ma_date_of_birth, day, month, year))
 
         var birthday = "$day/$month/$year"
+        myYear = year
         lateinit var yourBirthday: Date
 
         try {

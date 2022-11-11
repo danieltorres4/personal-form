@@ -25,4 +25,16 @@
     <string name="an_invalid_length">Account number must have at least 9 digits</string>
     <string name="email_required">Your email is required!</string>
     <string name="not_valid_email">Not valid email!</string>
+    <string name="rat_chinese_horoscope">Rat</string>
+    <string name="ox_chinese_horoscope">Ox</string>
+    <string name="tiger_chinese_horoscope">Tiger</string>
+    <string name="rabbit_chinese_horoscope">Rabbit</string>
+    <string name="dragon_chinese_horoscope">Dragon</string>
+    <string name="snake_chinese_horoscope">Snake</string>
+    <string name="horse_chinese_horoscope">Horse</string>
+    <string name="goat_chinese_horoscope">Goat</string>
+    <string name="monkey_chinese_horoscope">Monkey</string>
+    <string name="rooster_chinese_horoscope">Rooster</string>
+    <string name="dog_chinese_horoscope">Dog</string>
+    <string name="pig_chinese_horoscope">Pig</string>
 </resources>
