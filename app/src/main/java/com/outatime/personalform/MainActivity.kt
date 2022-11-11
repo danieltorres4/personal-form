@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val param = Bundle()
 
         if(binding.tvName.text.isNotEmpty() && binding.tvBirthday.text.isNotEmpty() && binding.tvAccountNumber.text.isNotEmpty() && binding.tvEmail.text.isNotEmpty()){
-            if(emailValidation(binding.tvEmail.text.toString())) {
+            if(emailValidation(binding.tvEmail.text.toString()) && binding.tvAccountNumber.text.toString().length == 9) {
                 name = binding.tvName.text.toString()
                 birthday = binding.tvBirthday.text.toString()
                 accountNumber = binding.tvAccountNumber.text.toString()
@@ -50,7 +50,13 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtras(param)
                 startActivity(intent)
             } else {
-                binding.tvEmail.error = getString(R.string.not_valid_email)
+                if (!emailValidation(binding.tvEmail.text.toString())) {
+                    binding.tvEmail.error = getString(R.string.not_valid_email)
+                }
+
+                if (binding.tvAccountNumber.text.toString().length < 9) {
+                    binding.tvAccountNumber.error = getString(R.string.an_invalid_length)
+                }
             }
         }
         else if (binding.tvName.text.isEmpty() || binding.tvBirthday.text.isEmpty() || binding.tvAccountNumber.text.isEmpty() || binding.tvEmail.text.isEmpty()){
@@ -107,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 
         println("$age years old")
     }
-    
+
 
     fun emailValidation(email: String): Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()

@@ -22,6 +22,7 @@
     <string name="name_required">Your name is required!</string>
     <string name="birthday_required">Your date of birth is required!</string>
     <string name="an_required">Your account number is required!</string>
+    <string name="an_invalid_length">Account number must have at least 9 digits</string>
     <string name="email_required">Your email is required!</string>
     <string name="not_valid_email">Not valid email!</string>
 </resources>
