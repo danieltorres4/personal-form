@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.View
+import android.widget.Toast
 import com.outatime.personalform.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -33,19 +34,41 @@ class MainActivity : AppCompatActivity() {
 
         val param = Bundle()
 
-        name = binding.tvName.text.toString()
-        birthday = binding.tvBirthday.text.toString()
-        accountNumber = binding.tvAccountNumber.text.toString()
-        email = binding.tvEmail.text.toString()
-        param.putString("name", name)
-        param.putString("birthday", birthday)
-        param.putString("accountNumber", accountNumber)
-        param.putString("email", email)
-        param.putInt("age", age)
+        if(binding.tvName.text.isNotEmpty() && binding.tvBirthday.text.isNotEmpty() && binding.tvAccountNumber.text.isNotEmpty() && binding.tvEmail.text.isNotEmpty()){
+            name = binding.tvName.text.toString()
+            birthday = binding.tvBirthday.text.toString()
+            accountNumber = binding.tvAccountNumber.text.toString()
+            email = binding.tvEmail.text.toString()
+            param.putString("name", name)
+            param.putString("birthday", birthday)
+            param.putString("accountNumber", accountNumber)
+            param.putString("email", email)
+            param.putInt("age", age)
 
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-        intent.putExtras(param)
-        startActivity(intent)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            intent.putExtras(param)
+            startActivity(intent)
+        }
+        else if (binding.tvName.text.isEmpty() || binding.tvBirthday.text.isEmpty() || binding.tvAccountNumber.text.isEmpty() || binding.tvEmail.text.isEmpty()){
+            Toast.makeText(this@MainActivity, getString(R.string.toast_required_values), Toast.LENGTH_LONG)
+
+            if (binding.tvName.text.isEmpty()) {
+                binding.tvName.error = getString(R.string.name_required)
+            }
+
+            if (binding.tvBirthday.text.isEmpty()) {
+                binding.tvBirthday.error = getString(R.string.birthday_required)
+            }
+
+            if (binding.tvAccountNumber.text.isEmpty()) {
+                binding.tvAccountNumber.error = getString(R.string.an_required)
+            }
+
+            if (binding.tvEmail.text.isEmpty()) {
+                binding.tvEmail.error = getString(R.string.email_required)
+            }
+        }
+
     }
 
     private fun showDatePickeDialog() {

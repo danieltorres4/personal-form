@@ -14,4 +14,9 @@
     <string name="tv_result_age">Edad: %d</string>
     <string name="tv_result_an">NC: %s</string>
     <string name="tv_result_birthday">Nacimiento: %s</string>
+    <string name="toast_required_values">Debes llenar todos los valores solicitados</string>
+    <string name="name_required">Se requiere tu nombre</string>
+    <string name="birthday_required">Se requiere fecha de nacimiento</string>
+    <string name="an_required">Se requiere tu número de cuenta</string>
+    <string name="email_required">Se requiere tu email</string>
 </resources>

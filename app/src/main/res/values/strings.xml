@@ -18,4 +18,9 @@
     <string name="tv_result_email" translatable="false">Email: %s</string>
     <string name="tv_result_birthday">Date of birth: %s</string>
     <string name="ma_date_of_birth" translatable="false">%1d / %2d / %3d</string>
+    <string name="toast_required_values">You should fill all the values :(</string>
+    <string name="name_required">Your name is required!</string>
+    <string name="birthday_required">Your date of birth is required!</string>
+    <string name="an_required">Your account number is required!</string>
+    <string name="email_required">Your email is required!</string>
 </resources>
