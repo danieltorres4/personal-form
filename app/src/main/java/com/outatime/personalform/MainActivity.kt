@@ -35,19 +35,23 @@ class MainActivity : AppCompatActivity() {
         val param = Bundle()
 
         if(binding.tvName.text.isNotEmpty() && binding.tvBirthday.text.isNotEmpty() && binding.tvAccountNumber.text.isNotEmpty() && binding.tvEmail.text.isNotEmpty()){
-            name = binding.tvName.text.toString()
-            birthday = binding.tvBirthday.text.toString()
-            accountNumber = binding.tvAccountNumber.text.toString()
-            email = binding.tvEmail.text.toString()
-            param.putString("name", name)
-            param.putString("birthday", birthday)
-            param.putString("accountNumber", accountNumber)
-            param.putString("email", email)
-            param.putInt("age", age)
+            if(emailValidation(binding.tvEmail.text.toString())) {
+                name = binding.tvName.text.toString()
+                birthday = binding.tvBirthday.text.toString()
+                accountNumber = binding.tvAccountNumber.text.toString()
+                email = binding.tvEmail.text.toString()
+                param.putString("name", name)
+                param.putString("birthday", birthday)
+                param.putString("accountNumber", accountNumber)
+                param.putString("email", email)
+                param.putInt("age", age)
 
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            intent.putExtras(param)
-            startActivity(intent)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                intent.putExtras(param)
+                startActivity(intent)
+            } else {
+                binding.tvEmail.error = getString(R.string.not_valid_email)
+            }
         }
         else if (binding.tvName.text.isEmpty() || binding.tvBirthday.text.isEmpty() || binding.tvAccountNumber.text.isEmpty() || binding.tvEmail.text.isEmpty()){
             Toast.makeText(this@MainActivity, getString(R.string.toast_required_values), Toast.LENGTH_LONG)
@@ -70,6 +74,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
 
     private fun showDatePickeDialog() {
         var datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, (month+1), year)}
@@ -101,5 +106,10 @@ class MainActivity : AppCompatActivity() {
         age = (days/365).toInt()
 
         println("$age years old")
+    }
+    
+
+    fun emailValidation(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 }
