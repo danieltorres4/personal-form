@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_enter_info"
+    android:background="@drawable/newbg"
     tools:context=".Splash">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
         android:text="@string/showing_app_name"
-        android:textColor="@color/black"
+        android:textColor="@color/teal_700"
         android:textSize="47sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
