@@ -21,7 +21,7 @@ class Splash : AppCompatActivity() {
         mp3.start()
 
         thread {
-            Thread.sleep(3000)
+            Thread.sleep(5000)
 
             //Explicit intent
             val intent = Intent(this, MainActivity::class.java)
