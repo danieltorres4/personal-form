@@ -1,6 +1,7 @@
 package com.outatime.personalform
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,12 +14,16 @@ import kotlin.reflect.typeOf
 class ShowInfo : AppCompatActivity() {
 
     private lateinit var binding2: ActivityShowInfoBinding
+    private lateinit var mp2: MediaPlayer
     //var myYear: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding2 = ActivityShowInfoBinding.inflate(layoutInflater)
         setContentView(binding2.root)
+
+        mp2 = MediaPlayer.create(this, R.raw.song2)
+        mp2.start()
 
         val bundle = intent.extras
 
@@ -53,6 +58,16 @@ class ShowInfo : AppCompatActivity() {
         Toast.makeText(this, "Age: $age", Toast.LENGTH_LONG).show()
          */
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mp2.pause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        mp2.start()
     }
 
     fun click(view: View) {

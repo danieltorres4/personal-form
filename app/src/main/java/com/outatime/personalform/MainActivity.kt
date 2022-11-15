@@ -1,6 +1,7 @@
 package com.outatime.personalform
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
@@ -13,6 +14,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var mp: MediaPlayer
     var name: String = ""
     var birthday: String = ""
     var accountNumber: String = ""
@@ -27,9 +29,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mp = MediaPlayer.create(this, R.raw.song1)
+        mp.start()
+
         binding.tvBirthday.setOnClickListener{
             showDatePickeDialog()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mp.pause()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        mp.start()
     }
 
     fun click(view: View) {
