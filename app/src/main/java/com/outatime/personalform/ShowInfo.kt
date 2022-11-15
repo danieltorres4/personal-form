@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.outatime.personalform.databinding.ActivityMainBinding
 import com.outatime.personalform.databinding.ActivityShowInfoBinding
 import kotlin.reflect.typeOf
@@ -50,14 +51,8 @@ class ShowInfo : AppCompatActivity() {
         if (myDay != null && myMonth != null) {
             zodiacSign(myDay, myMonth)
         }
-        /*
-        Toast.makeText(this, "Name: $name", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "Birthday: $birthday", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "Account number: $accountNumber", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "Email: $email", Toast.LENGTH_LONG).show()
-        Toast.makeText(this, "Age: $age", Toast.LENGTH_LONG).show()
-         */
-
+        
+        //Animatoo.animateSpin(this)
     }
 
     override fun onPause() {

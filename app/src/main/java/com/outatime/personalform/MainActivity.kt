@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.ContactsContract.CommonDataKinds.Email
 import android.view.View
 import android.widget.Toast
+import com.blogspot.atifsoftwares.animatoolib.Animatoo
 import com.outatime.personalform.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -70,6 +71,8 @@ class MainActivity : AppCompatActivity() {
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 intent.putExtras(param)
                 startActivity(intent)
+
+                Animatoo.animateSpin(this)
             } else {
                 if (!emailValidation(binding.tvEmail.text.toString())) {
                     binding.tvEmail.error = getString(R.string.not_valid_email)
