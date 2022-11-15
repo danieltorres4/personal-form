@@ -51,7 +51,7 @@ class ShowInfo : AppCompatActivity() {
         if (myDay != null && myMonth != null) {
             zodiacSign(myDay, myMonth)
         }
-        
+
         //Animatoo.animateSpin(this)
     }
 
