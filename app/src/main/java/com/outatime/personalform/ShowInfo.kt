@@ -66,7 +66,7 @@ class ShowInfo : AppCompatActivity() {
     }
 
     fun click(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, WaitingScreen::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
     }
