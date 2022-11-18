@@ -17,7 +17,7 @@ class Splash : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mp3 = MediaPlayer.create(this, R.raw.song3)
+        mp3 = MediaPlayer.create(this, R.raw.song4)
         mp3.start()
 
         thread {
